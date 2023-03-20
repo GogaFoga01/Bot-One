@@ -1,5 +1,6 @@
 import aiogram
 import logging
+
 from aiogram import Bot, Dispatcher, executor, types
 
 API_TOKEN = '5753731786:AAHh7dSDsqgWKJsPJNttUKZvY87Fw6zy3Lc'
@@ -12,10 +13,6 @@ dp = Dispatcher(bot)
 async def send_welcome(message: types.Message):
     await message.reply("Hi!\nI'm EchoBot!\nPowered by aiogram.")
 
-
-@dp.message_handler()
-async def echo(message: types.Message):
-    await message.reply("Hi!\nI'm EchoBot!\nPowered by aiogram.")
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
