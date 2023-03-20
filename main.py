@@ -11,6 +11,11 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
+
+async def send_to_telegram(data: str):
+    await bot.send_message(chat_id=CHAT_ID, text=data)
+
+
 async def send_discord_output():
     while True:
         try:
@@ -22,11 +27,11 @@ async def send_discord_output():
             await bot.send_message(chat_id=CHAT_ID, text=output)
 
             # Wait for 10 seconds before checking for new output
-            await asyncio.sleep(100)
+            await asyncio.sleep(10)
 
         except Exception as e:
             logging.error(f"Error sending Discord output: {e}")
-            await asyncio.sleep(100)
+            await asyncio.sleep(10)
 
 @dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):

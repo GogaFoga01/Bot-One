@@ -1,4 +1,5 @@
 import discord
+import main
 
 # Replace YOUR_TOKEN_HERE with your bot's token
 TOKEN = "MTA4NjE5OTM5NzU5Mjg1ODY0NA.GpEFVQ.IaDiPsm-k2VTYLI2flTeaYEIC5CcGE5GkQX4Q0"
@@ -22,6 +23,7 @@ async def on_message(message):
 
         output = f"Состовитель: {author}\nИсполнитель: {role_name}\nТело Задачи: {content}"
         print(output)
+        await main.send_to_telegram(output)
 
 
 client.run(TOKEN)
