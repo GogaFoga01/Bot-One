@@ -3,9 +3,9 @@ import logging
 from aiogram import Bot, Dispatcher, executor, types
 import requests
 
-API_TOKEN = '5753731786:AAHh7dSDsqgWKJsPJNttUKZvY87Fw6zy3Lc'
-CHAT_ID = 570109198 # Chat ID of the user who will receive the messages
-DISCORD_BOT_URL = 'https://discord.com/api/oauth2/authorize?client_id=1086199397592858644&permissions=8&scope=bot' # https://discord.com/api/oauth2/authorize?client_id=1086199397592858644&permissions=8&scope=bot
+API_TOKEN = 'Yor Token' # Указать ТОкен Бота телеграмм
+CHAT_ID = "Your Chat_ID" # https://t.me/getmyid_bot Бот для получения ID
+DISCORD_BOT_URL = 'Your Https' # Ссылку заменить на своего  бота
 
 logging.basicConfig(level=logging.INFO)
 bot = Bot(token=API_TOKEN)

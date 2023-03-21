@@ -2,10 +2,10 @@ import discord
 import Telegram
 
 # Replace YOUR_TOKEN_HERE with your bot's token
-TOKEN = "MTA4NjE5OTM5NzU5Mjg1ODY0NA.GpEFVQ.IaDiPsm-k2VTYLI2flTeaYEIC5CcGE5GkQX4Q0"
+TOKEN = 'Yor Token'# Токен бота Дискорда
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
-CHANNEL_ID = 1086194776111579310
+CHANNEL_ID = 'CHANNEL_ID' # Указать ID канала с которого бот получает сообщения
 
 
 @client.event
@@ -23,7 +23,7 @@ async def on_message(message):
 
         output = f"Состовитель: {author}\nИсполнитель: {role_name}\nТело Задачи: {content}"
         print(output)
-        await main.send_to_telegram(output)
+        await Telegram.send_to_telegram(output)
 
 
 client.run(TOKEN)
