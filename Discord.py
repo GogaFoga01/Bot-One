@@ -1,5 +1,5 @@
 import discord
-import main
+import Telegram
 
 # Replace YOUR_TOKEN_HERE with your bot's token
 TOKEN = "MTA4NjE5OTM5NzU5Mjg1ODY0NA.GpEFVQ.IaDiPsm-k2VTYLI2flTeaYEIC5CcGE5GkQX4Q0"
